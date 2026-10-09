@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Report Waste Issue | Waste Management Monitoring System</title>
+  <link rel="stylesheet" href="styles.css?v=10" />
+</head>
+<body>
+  <div class="app-shell">
+    <div data-sidebar="report" data-expand-report></div>
+
+    <main class="main-content">
+      <header class="report-header">
+        <div class="report-heading">
+          <div class="report-heading-icon">
+            <img src="https://api.builder.io/api/v1/image/assets/TEMP/2fbe721154940f881c106a45a73d7bdb7f6e01fa?width=176" alt="" />
+          </div>
+          <div>
+            <h1 class="report-page-title">Report Waste Issue</h1>
+            <p class="report-page-subtitle">Help keep our city clean and green</p>
+          </div>
+        </div>
+        <img class="user-avatar" src="https://api.builder.io/api/v1/image/assets/TEMP/4c6a939442e546e1585b0e4b093734bfdc82a53a?width=246" alt="Profile" />
+      </header>
+
+      <form class="report-form" id="report-form" novalidate>
+        <p class="form-success" id="form-success" role="status" hidden>Report submitted. Thank you for helping keep Pasig clean!</p>
+        <label class="form-label" for="category">Waste Category</label>
+        <div class="form-select-wrap">
+          <select class="form-select" id="category" required>
+            <option value="" selected disabled>Select category</option>
+            <option>General Waste</option>
+            <option>Recyclable Waste</option>
+            <option>Hazardous Waste</option>
+            <option>Other Concern</option>
+          </select>
+        </div>
+        <p class="field-error" id="category-error" role="alert"></p>
+
+        <label class="form-label" for="location">Location</label>
+        <div class="form-select-wrap">
+          <select class="form-select" id="location" required>
+            <option value="" selected disabled>Select location</option>
+            <option>Brgy. San Antonio</option>
+            <option>Brgy. Kapitolyo</option>
+            <option>Brgy. Pinagbuhatan</option>
+            <option>Brgy. Rosario</option>
+            <option>Brgy. San Joaquin</option>
+          </select>
+        </div>
+        <p class="field-error" id="location-error" role="alert"></p>
+
+        <label class="date-field">
+          <input class="date-input" id="date" type="date" aria-label="Date" />
+        </label>
+        <p class="field-error" id="date-error" role="alert"></p>
+
+        <label class="form-label" for="description">Description</label>
+        <textarea class="form-textarea" id="description" placeholder="Describe the issue (e.g,, overflowing trash,illegal dumping, etc.)" maxlength="500"></textarea>
+        <p class="field-hint"><span id="description-count">0</span>/500</p>
+        <p class="field-error" id="description-error" role="alert"></p>
+
+        <span class="form-label">Upload Photo</span>
+        <label class="upload-box">
+          <img class="upload-icon" src="https://api.builder.io/api/v1/image/assets/TEMP/55ecff2d21ab6947ec0c54b31fc73f09ff2757d7?width=176" alt="" />
+          <span class="upload-text">Tap to upload or take a photo</span>
+          <input class="upload-input" id="photo" type="file" accept="image/jpeg,image/png,image/webp" />
+        </label>
+        <p class="field-error" id="photo-error" role="alert"></p>
+
+        <button class="submit-button" type="submit">Submit Report</button>
+      </form>
+    </main>
+  </div>
+  <script src="sidebar.js?v=3"></script>
+  <script src="portal.js?v=7"></script>
+  <script src="validation.js?v=4"></script>
+  <script>initReportValidation();</script>
+</body>
+</html>

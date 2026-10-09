@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profile | Waste Management Monitoring System</title>
+  <link rel="stylesheet" href="styles.css?v=14" />
+</head>
+<body>
+  <div class="app-shell">
+    <div data-sidebar="profile"></div>
+    <main class="main-content portal-profile-overview">
+      <section class="profile-overview-card">
+        <header class="profile-overview-header">
+          <a class="profile-overview-back" href="dashboard.html" aria-label="Back to home">←</a>
+          <h1>Profile</h1>
+        </header>
+        <div class="profile-overview-identity">
+          <span class="profile-overview-avatar">
+            <img id="profile-overview-photo" alt="" hidden />
+            <span id="profile-overview-initials" aria-hidden="true">AF</span>
+          </span>
+          <span class="profile-overview-user">
+            <strong id="profile-overview-name">Arishelle Fernandez</strong>
+            <small id="profile-overview-email">arishellefernandez@gmail.com</small>
+          </span>
+        </div>
+        <nav class="profile-overview-options" aria-label="Profile options">
+          <a class="profile-overview-option" href="edit-profile.html">
+            <span class="profile-overview-option-icon profile-overview-pencil" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M7 25.5V33h7.5L34 13.5 26.5 6 7 25.5Z" fill="currentColor"/><path d="m23.5 9 7.5 7.5M7 33h7.5L34 13.5 26.5 6 7 25.5V33Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg></span>
+            <strong>Edit Profile</strong><span class="profile-overview-chevron" aria-hidden="true">›</span>
+          </a>
+          <a class="profile-overview-option" href="change-password.html">
+            <span class="profile-overview-option-icon profile-overview-lock" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M11 17v-5a9 9 0 0 1 18 0v5" fill="none" stroke="currentColor" stroke-width="3.5"/><rect x="7" y="16" width="26" height="21" rx="2" fill="currentColor"/><circle cx="20" cy="25" r="2" fill="#fff"/><path d="M20 27v5" stroke="#fff" stroke-width="2"/></svg></span>
+            <strong>Change Password</strong><span class="profile-overview-chevron" aria-hidden="true">›</span>
+          </a>
+          <a class="profile-overview-option" href="notification-settings.html">
+            <span class="profile-overview-option-icon profile-overview-bell" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M20 4a3 3 0 0 0-3 3v1.1C11.4 9.5 8 14.3 8 20v9l-4 4h32l-4-4v-9c0-5.7-3.4-10.5-9-11.9V7a3 3 0 0 0-3-3Zm-5 32a5 5 0 0 0 10 0H15Z" fill="currentColor"/></svg></span>
+            <strong>Notification Settings</strong><span class="profile-overview-chevron" aria-hidden="true">›</span>
+          </a>
+          <a class="profile-overview-option" href="help-support.html">
+            <span class="profile-overview-option-icon profile-overview-help" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="17" stroke="currentColor" stroke-width="3"/><path d="M15.5 15a4.7 4.7 0 1 1 7.5 3.8c-2.1 1.5-3 2.3-3 5.2M20 30h.02" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></span>
+            <strong>Help &amp; Support</strong><span class="profile-overview-chevron" aria-hidden="true">›</span>
+          </a>
+        </nav>
+      </section>
+    </main>
+  </div>
+  <script src="sidebar.js?v=3"></script>
+  <script src="portal.js?v=9"></script>
+</body>
+</html>

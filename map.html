@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Service Map | Waste Management Monitoring System</title>
+  <link rel="stylesheet" href="styles.css?v=10" />
+</head>
+<body>
+  <div class="app-shell">
+    <div data-sidebar="map"></div>
+    <main class="main-content">
+      <header class="portal-header">
+        <div><p class="portal-eyebrow">Pasig City</p><h1 class="portal-title">Service Map</h1><p class="portal-subtitle">Explore collection areas, route coverage, and community reports.</p></div>
+        <div class="portal-header-actions"><a class="portal-primary-link" href="report.html">＋ Report an issue</a></div>
+      </header>
+      <section class="portal-page map-page">
+        <div class="map-controls portal-card">
+          <label class="portal-field"><span>Show on map</span><select id="map-layer"><option value="all">Collection areas and reports</option><option value="areas">Collection areas</option><option value="reports">Community reports</option></select></label>
+          <label class="portal-field"><span>Collection area</span><select id="map-area-filter"><option value="all">All areas</option><option>San Antonio</option><option>Kapitolyo</option><option>Pinagbuhatan</option><option>Rosario</option><option>San Joaquin</option></select></label>
+          <div class="map-legend"><span><i class="map-legend-area"></i>Collection area</span><span><i class="map-legend-report"></i>Reported issue</span></div>
+        </div>
+        <div class="map-content-grid">
+          <section class="portal-card map-visual-card">
+            <div class="map-visual-heading"><div><h2>Pasig service areas</h2><p>A schematic view of service neighborhoods, not a turn-by-turn navigation map.</p></div><span class="map-live-tag"><i></i> Local data</span></div>
+            <div class="service-map" id="service-map" role="region" aria-label="Schematic service area map of Pasig City">
+              <svg class="service-map-lines" viewBox="0 0 800 500" aria-hidden="true">
+                <path class="map-river" d="M-20 345 C115 275 165 397 285 323 S460 210 548 280 S713 376 825 280" />
+                <path class="map-road" d="M85 64 L180 193 L335 141 L452 237 L658 118 M117 443 L180 193 L330 344 L452 237 L693 417 M335 141 L330 344 M85 64 L117 443 M658 118 L693 417" />
+                <path class="map-road-minor" d="M60 248 L335 141 L570 72 M180 193 L548 280 L760 219 M117 443 L452 237 L658 118" />
+                <text x="400" y="469">PASIG RIVER</text>
+              </svg>
+              <button class="map-marker map-marker-san" data-map-area="San Antonio" style="--x:24%;--y:29%" type="button"><span class="map-marker-pin">1</span><span class="map-marker-label">San Antonio</span></button>
+              <button class="map-marker map-marker-kap" data-map-area="Kapitolyo" style="--x:60%;--y:23%" type="button"><span class="map-marker-pin">2</span><span class="map-marker-label">Kapitolyo</span></button>
+              <button class="map-marker map-marker-pinag" data-map-area="Pinagbuhatan" style="--x:73%;--y:67%" type="button"><span class="map-marker-pin">3</span><span class="map-marker-label">Pinagbuhatan</span></button>
+              <button class="map-marker map-marker-rosario" data-map-area="Rosario" style="--x:39%;--y:60%" type="button"><span class="map-marker-pin">4</span><span class="map-marker-label">Rosario</span></button>
+              <button class="map-marker map-marker-joaquin" data-map-area="San Joaquin" style="--x:27%;--y:78%" type="button"><span class="map-marker-pin">5</span><span class="map-marker-label">San Joaquin</span></button>
+              <div class="map-compass" aria-label="North">N<span>↑</span></div>
+            </div>
+          </section>
+          <aside class="portal-card map-area-panel">
+            <div class="portal-card-heading"><div><h2 id="map-list-title">Areas and activity</h2><p id="map-list-count"></p></div></div>
+            <div class="map-area-list" id="map-area-list" aria-live="polite"></div>
+          </aside>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="sidebar.js?v=3"></script>
+  <script src="portal.js?v=7"></script>
+</body>
+</html>

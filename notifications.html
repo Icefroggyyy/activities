@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notifications | Waste Management Monitoring System</title>
+  <link rel="stylesheet" href="styles.css?v=10" />
+</head>
+<body>
+  <div class="app-shell">
+    <div data-sidebar="notification"></div>
+    <main class="main-content portal-figma-page">
+      <header class="notification-page-header">
+        <div class="notification-title-row"><span class="notification-title-icon" aria-hidden="true">♧</span><div><h1>Notifications</h1><p>Stay updated with the latest reports, status, and announcements.</p></div></div>
+        <div class="notification-profile"><span class="notification-profile-avatar" id="notification-profile-avatar"><img id="notification-profile-photo" alt="" hidden /><span id="notification-profile-initials">AF</span></span><span><strong id="notification-profile-name">Arishelle Fernandez</strong><small>Let’s keep Pasig clean!</small></span><a href="profile.html" aria-label="View profile">⌄</a></div>
+      </header>
+      <section class="portal-page notifications-page-content">
+        <nav class="notification-tabs" id="notification-filter" role="tablist" aria-label="Notification categories">
+          <button class="notification-tab is-active" type="button" role="tab" aria-selected="true" data-category="all"><span>▦</span>All <b id="notification-count-all">0</b></button>
+          <button class="notification-tab" type="button" role="tab" aria-selected="false" data-category="Updates"><span>⟳</span>Updates <b id="notification-count-updates">0</b></button>
+          <button class="notification-tab" type="button" role="tab" aria-selected="false" data-category="Announcements"><span>◢</span>Announcements <b id="notification-count-announcements">0</b></button>
+          <button class="notification-tab" type="button" role="tab" aria-selected="false" data-category="System"><span>⚙</span>System <b id="notification-count-system">0</b></button>
+          <button class="notification-mark-read" id="mark-all-read" type="button">✓ &nbsp;Mark all as read</button>
+        </nav>
+        <p id="notification-message" class="portal-message notification-message" role="status" hidden></p>
+        <div class="notification-sections" id="notification-list" aria-live="polite"></div>
+      </section>
+    </main>
+  </div>
+  <script src="sidebar.js?v=3"></script>
+  <script src="portal.js?v=7"></script>
+</body>
+</html>

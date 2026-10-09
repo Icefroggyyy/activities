@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Dashboard | Waste Management Monitoring System</title>
+  <link rel="stylesheet" href="styles.css?v=11" />
+</head>
+<body>
+  <div class="app-shell">
+    <div data-sidebar="admin"></div>
+
+    <main class="main-content">
+      <header class="admin-header">
+        <div>
+          <h1 class="admin-title">Admin Dashboard</h1>
+          <p class="admin-subtitle">Monitor, Manage, and keep Pasig clean!</p>
+        </div>
+        <label class="search-bar admin-search">
+          <span>Search reports, barangay or location</span>
+        </label>
+        <div class="topbar-user">
+          <img class="user-avatar" src="https://api.builder.io/api/v1/image/assets/TEMP/9863167def4a4ea7e08396d4cd2738807f6d930e?width=136" alt="Admin" />
+          <div>
+            <p class="user-name">Admin</p>
+            <p class="user-role">System Administrator</p>
+          </div>
+        </div>
+      </header>
+
+      <nav class="admin-tools">
+        <button class="tool-button is-selected" type="button" data-ops-tab="overview">Overview</button>
+        <button class="tool-button" type="button" data-ops-tab="trucks">Garbage Trucks</button>
+        <button class="tool-button" type="button" data-ops-tab="drivers">Drivers</button>
+        <button class="tool-button" type="button" data-ops-tab="areas">Collection Areas</button>
+        <button class="tool-button" type="button" data-ops-tab="schedules">Schedules</button>
+        <button class="tool-button" type="button" data-ops-tab="routes">Routes</button>
+        <button class="tool-button" type="button" data-ops-tab="records">Collection Records</button>
+        <button class="tool-button" type="button" data-ops-tab="summary">Collection Summary</button>
+      </nav>
+
+      <section id="dashboard-view" aria-label="Admin overview">
+      <div class="admin-grid">
+        <section class="chart-panel">
+          <div class="period-tabs">
+            <span class="period-tab">7D</span>
+            <span class="period-tab is-selected">30D</span>
+            <span class="period-tab">3D</span>
+            <span class="period-tab">6M</span>
+            <span class="period-tab">1Y</span>
+          </div>
+          <div class="trend-chart" role="img" aria-label="Reports trend, Aug 15 to Sep 2"></div>
+        </section>
+
+        <section class="admin-panel">
+          <div class="panel-heading-row">
+            <img src="https://api.builder.io/api/v1/image/assets/TEMP/37e8ef8b235f7b5721cc61ecb220380cfb4edf9f?width=68" alt="" />
+            <h3 class="panel-title">Reports by Category</h3>
+          </div>
+          <div class="admin-category-body">
+            <div class="admin-donut">
+              <div class="donut-center"><p class="donut-total">128</p><p class="donut-caption">Total Reports</p></div>
+            </div>
+            <ul class="admin-legend">
+              <li class="admin-legend-item"><span class="legend-dot dot-general"></span><span class="admin-legend-name">General waste</span><span class="admin-legend-value">45%</span><span>58</span></li>
+              <li class="admin-legend-item"><span class="legend-dot dot-recyclable"></span><span class="admin-legend-name">Recyclable Waste</span><span class="admin-legend-value">25%</span><span>32</span></li>
+              <li class="admin-legend-item"><span class="legend-dot dot-hazardous"></span><span class="admin-legend-name">Hazardous Waste</span><span class="admin-legend-value">15%</span><span>19</span></li>
+              <li class="admin-legend-item"><span class="legend-dot dot-concern"></span><span class="admin-legend-name">Other Concern</span><span class="admin-legend-value">15%</span><span>19</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="admin-panel">
+          <h3 class="hotspot-title">Waste Hotspots</h3>
+          <p class="hotspot-subtitle">Areas with the most waste reports</p>
+          <div class="map-wrap">
+            <img class="map-image" src="https://api.builder.io/api/v1/image/assets/TEMP/a5913543126bd0e5e00a0a6911825971849ca6ac?width=1482" alt="Map of waste hotspots in Pasig" />
+            <div class="map-legend">
+              <span class="map-legend-item"><span class="map-legend-dot dot-high"></span>High (10 )</span>
+              <span class="map-legend-item"><span class="map-legend-dot dot-medium"></span>Medium (5-9)</span>
+              <span class="map-legend-item"><span class="map-legend-dot dot-low"></span>Low (1-4 )</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="admin-panel">
+          <div class="panel-header">
+            <h3 class="panel-title">Urgent Reports</h3>
+            <a class="view-all-link" href="#">View All</a>
+          </div>
+          <article class="urgent-item">
+            <img class="urgent-thumb" src="https://api.builder.io/api/v1/image/assets/TEMP/b2d70d44b17cd90a6ad3da4dba101d4677c196a7?width=234" alt="" />
+            <div class="urgent-info"><h4 class="urgent-name">Uncollected Garbage</h4><p class="urgent-meta">Brgy. San Antonio, Pasig City<br />Aug 30, 2025 - 2 hrs ago</p></div>
+            <div class="urgent-actions"><span class="urgent-badge">Urgent</span><a class="details-button" href="#">View Details</a></div>
+          </article>
+          <article class="urgent-item">
+            <img class="urgent-thumb" src="https://api.builder.io/api/v1/image/assets/TEMP/d3fd2f2c4c974fc39c15734919a9288aabc86768?width=234" alt="" />
+            <div class="urgent-info"><h4 class="urgent-name">Overflowing Trash Bins</h4><p class="urgent-meta">Brgy. katipolyo, Pasig City<br />Aug 29, 2025 - 4 hrs ago</p></div>
+            <div class="urgent-actions"><span class="urgent-badge">Urgent</span><a class="details-button" href="#">View Details</a></div>
+          </article>
+          <article class="urgent-item">
+            <img class="urgent-thumb" src="https://api.builder.io/api/v1/image/assets/TEMP/bd19e4fd1c46c2d32fbcc340129d2fd9725e0651?width=230" alt="" />
+            <div class="urgent-info"><h4 class="urgent-name">Illegal Dumping</h4><p class="urgent-meta">Brgy. Rosario, Pasig City<br />Aug 28, 2025 - 6 hrs ago</p></div>
+            <div class="urgent-actions"><span class="urgent-badge">Urgent</span><a class="details-button" href="#">View Details</a></div>
+          </article>
+          <article class="urgent-item">
+            <img class="urgent-thumb" src="https://api.builder.io/api/v1/image/assets/TEMP/24acc8f0c6000f15faf79dd7d138a5c68e7c9e68?width=228" alt="" />
+            <div class="urgent-info"><h4 class="urgent-name">Blocked Drainage</h4><p class="urgent-meta">Brgy. San Joaquin, Pasig City<br />Aug 27, 2025 - 8 hrs ago</p></div>
+            <div class="urgent-actions"><span class="urgent-badge">Urgent</span><a class="details-button" href="#">View Details</a></div>
+          </article>
+        </section>
+      </div>
+
+      <div class="admin-bottom-grid">
+        <div class="records-table-wrap">
+          <p id="admin-report-error" class="portal-error" role="status" hidden></p>
+          <table class="records-table">
+            <thead>
+              <tr><th>#</th><th>Report Title</th><th>Location</th><th>Category</th><th>Status</th><th>Date</th><th>Assigned To</th><th>Photo</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>Uncollected Garbage</td><td>Brgy. San Antonio</td><td>General Waste</td><td><span class="table-badge table-badge-pending">Pending</span></td><td>Sep 2, 2025 10:24 AM</td><td>Ramon Dela Cruz</td><td>—</td></tr>
+              <tr><td>2</td><td>Overflowing Trash Bins</td><td>Brgy. Kapitolyo</td><td>Hazardous Waste</td><td><span class="table-badge table-badge-urgent">Urgent</span></td><td>Sep 2, 2025 9:15 AM</td><td>Juan Santos</td><td>—</td></tr>
+              <tr><td>3</td><td>Illegal Dumping</td><td>Brgy. Pinagbuhatan</td><td>Other Concern</td><td><span class="table-badge table-badge-progress">In Progress</span></td><td>Sep 1, 2025 03:40 PM</td><td>Kara David</td><td>—</td></tr>
+              <tr><td>4</td><td>Blocked Drainage</td><td>Brgy. Rosario</td><td>General Waste</td><td><span class="table-badge table-badge-resolved">Resolved</span></td><td>Sep 1, 2025 11:20 AM</td><td>Pedro Reyes</td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <aside class="staff-panel">
+          <h3 class="staff-title">Staff / Collector Monitoring</h3>
+          <div class="staff-card"><div class="staff-card-icon staff-green"></div><div><p class="staff-value">12</p><p class="staff-label">Total Staff</p></div></div>
+          <div class="staff-card"><div class="staff-card-icon staff-blue"></div><div><p class="staff-value">8</p><p class="staff-label">Currently Assigned</p></div></div>
+          <div class="staff-card"><div class="staff-card-icon staff-red"></div><div><p class="staff-value">4</p><p class="staff-label">Pending Assignments</p></div></div>
+          <div class="staff-card"><div class="staff-card-icon staff-green"></div><div><p class="staff-value">42</p><p class="staff-label">Completed Reports</p></div></div>
+        </aside>
+      </div>
+      </section>
+
+      <section id="ops-view" class="ops-view" aria-live="polite" hidden>
+        <header class="ops-heading">
+          <div>
+            <h2 class="ops-title" id="ops-title"></h2>
+            <p class="ops-description" id="ops-description"></p>
+          </div>
+          <button class="ops-primary-button" id="ops-add-button" type="button">Add new</button>
+        </header>
+        <div class="ops-toolbar" id="ops-toolbar">
+          <label class="ops-search-label" for="ops-search">Search</label>
+          <input class="ops-search" id="ops-search" type="search" placeholder="Search this list" />
+          <label class="ops-filter-label" for="ops-status-filter">Status</label>
+          <select class="ops-filter" id="ops-status-filter">
+            <option value="">All statuses</option>
+          </select>
+        </div>
+        <div class="ops-table-wrap" id="ops-table-wrap"></div>
+        <div id="ops-summary" class="ops-summary" hidden></div>
+      </section>
+
+      <dialog class="ops-dialog" id="ops-dialog">
+        <form id="ops-form" class="ops-form" novalidate>
+          <header class="ops-dialog-header">
+            <div>
+              <p class="ops-eyebrow">Collection operations</p>
+              <h2 id="ops-dialog-title"></h2>
+            </div>
+            <button class="ops-close-button" type="button" id="ops-close-button" aria-label="Close">×</button>
+          </header>
+          <div class="ops-form-fields" id="ops-form-fields"></div>
+          <p class="ops-form-error" id="ops-form-error" role="alert"></p>
+          <footer class="ops-form-actions">
+            <button class="ops-secondary-button" type="button" id="ops-cancel-button">Cancel</button>
+            <button class="ops-primary-button" type="submit">Save</button>
+          </footer>
+        </form>
+      </dialog>
+      <dialog class="admin-report-photo-dialog" id="admin-report-photo-dialog" aria-label="Uploaded report photo">
+        <form method="dialog"><button class="admin-report-photo-close" aria-label="Close photo">×</button></form>
+        <img id="admin-report-photo-full" alt="Uploaded report photo" />
+      </dialog>
+    </main>
+  </div>
+  <script src="sidebar.js?v=3"></script>
+  <script src="operations.js?v=2"></script>
+  <script src="admin-reports.js?v=1"></script>
+</body>
+</html>

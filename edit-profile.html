@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Edit Profile | Waste Management Monitoring System</title>
+  <link rel="stylesheet" href="styles.css?v=14" />
+</head>
+<body>
+  <div class="app-shell">
+    <div data-sidebar="profile"></div>
+    <main class="main-content portal-figma-page">
+      <header class="edit-profile-header">
+        <a class="portal-back-link" href="profile.html" aria-label="Back to profile">←</a>
+        <h1>Edit Profile</h1>
+      </header>
+      <section class="edit-profile-page">
+        <form id="profile-form" class="edit-profile-form">
+          <p id="profile-message" class="portal-message profile-message" role="status" hidden></p>
+          <div class="profile-photo-row">
+            <img class="profile-photo-preview" id="profile-photo-preview" alt="Profile photo" hidden />
+            <div class="profile-avatar-large" id="profile-avatar" aria-hidden="true">AF</div>
+            <label class="profile-photo-button" for="profile-photo">Change Photo</label>
+            <input id="profile-photo" class="visually-hidden-input" type="file" accept="image/jpeg,image/png,image/webp" />
+          </div>
+          <div class="profile-edit-row">
+            <span class="profile-edit-icon profile-edit-pencil" aria-hidden="true">↗</span>
+            <label class="profile-edit-copy"><strong>Full Name</strong><input name="name" type="text" autocomplete="name" maxlength="80" required /></label>
+            <span class="profile-row-chevron" aria-hidden="true">›</span>
+          </div>
+          <div class="profile-edit-row">
+            <span class="profile-edit-icon" aria-hidden="true">☎</span>
+            <label class="profile-edit-copy"><strong>Contact Number</strong><input name="phone" type="tel" autocomplete="tel" maxlength="30" placeholder="Add a contact number" /></label>
+            <span class="profile-row-chevron" aria-hidden="true">›</span>
+          </div>
+          <div class="profile-edit-row">
+            <span class="profile-edit-icon profile-edit-house" aria-hidden="true">⌂</span>
+            <label class="profile-edit-copy"><strong>Address</strong><input name="address" type="text" autocomplete="street-address" maxlength="120" placeholder="Barangay and city" /></label>
+            <span class="profile-row-chevron" aria-hidden="true">›</span>
+          </div>
+          <div class="profile-edit-actions">
+            <button class="profile-save-button" type="submit">Save Changes</button>
+            <a class="profile-cancel-button" href="profile.html">Cancel</a>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+  <script src="sidebar.js?v=3"></script>
+  <script src="portal.js?v=11"></script>
+</body>
+</html>

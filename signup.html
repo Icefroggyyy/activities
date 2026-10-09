@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign Up | Waste Management Monitoring System</title>
+  <link rel="stylesheet" href="styles.css?v=16" />
+</head>
+<body>
+  <main class="login-page signup-page">
+    <img class="login-banner" src="https://api.builder.io/api/v1/image/assets/TEMP/e183925491105402f87cae243fefff44518ebcc6?width=1520" alt="Waste Management Monitoring System - A cleaner Pasig for a healthier tomorrow" />
+    <section class="login-panel signup-panel">
+      <form class="login-form signup-form" id="signup-form" novalidate>
+        <h1 class="login-heading">Create Account</h1>
+        <p class="login-subheading">Sign up for the waste management portal</p>
+        <p class="login-local-note">Demo account data and password are saved only in this browser.</p>
+
+        <div class="login-group">
+          <label class="login-field signup-field">
+            <span class="signup-field-icon" aria-hidden="true">●</span>
+            <input class="login-field-input" type="text" name="name" autocomplete="name" maxlength="80" placeholder="Full name" required />
+          </label>
+        </div>
+        <div class="login-group">
+          <label class="login-field signup-field">
+            <span class="signup-field-icon" aria-hidden="true">✉</span>
+            <input class="login-field-input" type="email" name="email" autocomplete="email" maxlength="254" placeholder="Email address" required />
+          </label>
+        </div>
+        <div class="login-group">
+          <label class="login-field signup-field">
+            <span class="signup-field-icon" aria-hidden="true">☎</span>
+            <input class="login-field-input" type="tel" name="phone" autocomplete="tel" maxlength="30" placeholder="Contact number (optional)" />
+          </label>
+        </div>
+        <div class="login-group">
+          <label class="login-field signup-field">
+            <span class="signup-field-icon" aria-hidden="true">●</span>
+            <input class="login-field-input" type="password" name="password" autocomplete="new-password" minlength="8" maxlength="128" placeholder="Password (at least 8 characters)" required />
+          </label>
+        </div>
+        <div class="login-group">
+          <label class="login-field signup-field">
+            <span class="signup-field-icon" aria-hidden="true">●</span>
+            <input class="login-field-input" type="password" name="confirmPassword" autocomplete="new-password" minlength="8" maxlength="128" placeholder="Confirm password" required />
+          </label>
+        </div>
+        <button class="login-button signup-submit" type="submit">Create Account</button>
+        <p class="portal-message login-auth-message" id="signup-message" role="status" hidden></p>
+        <p class="signup-prompt">Already have an account? <a class="signup-link" href="index.html">Log In</a></p>
+      </form>
+    </section>
+  </main>
+  <script src="auth.js?v=4"></script>
+</body>
+</html>

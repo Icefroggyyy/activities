@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Log In | Waste Management Monitoring System</title>
+  <link rel="stylesheet" href="styles.css?v=18" />
+</head>
+<body>
+  <main class="login-page">
+    <img class="login-banner" src="https://api.builder.io/api/v1/image/assets/TEMP/e183925491105402f87cae243fefff44518ebcc6?width=1520" alt="Waste Management Monitoring System - A cleaner Pasig for a healthier tomorrow" />
+    <section class="login-panel">
+      <form class="login-form" id="login-form" action="dashboard.html" novalidate>
+        <h1 class="login-heading">Welcome Back!</h1>
+        <p class="login-subheading">Log in to your account</p>
+        <p class="login-local-note">Sign in to an account saved in this browser, or sign up to create one.</p>
+
+        <div class="login-group">
+          <label class="login-field">
+            <img class="login-field-icon" src="https://api.builder.io/api/v1/image/assets/TEMP/bf570201cddf9c970d3812e2e81009dede4dfc13?width=154" alt="Email" />
+            <input class="login-field-input" id="email" type="email" name="email" autocomplete="email" aria-describedby="email-error" />
+          </label>
+          <p class="field-error" id="email-error" role="alert"></p>
+        </div>
+
+        <div class="login-group">
+        <label class="login-field">
+          <img class="login-field-icon" src="https://api.builder.io/api/v1/image/assets/TEMP/e5ec05071086fc6a4370e00a3474af167ea33ff4?width=124" alt="Password" />
+          <input class="login-field-input" id="password" type="password" name="password" autocomplete="current-password" maxlength="128" aria-describedby="password-error" />
+          <button class="password-toggle" id="password-toggle" type="button" aria-label="Show password">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/><path d="M3 3l18 18"/></svg>
+          </button>
+        </label>
+          <p class="field-error" id="password-error" role="alert"></p>
+        </div>
+
+        <button class="login-button" type="submit">Log In</button>
+        <p class="portal-message login-auth-message" id="auth-message" role="status" hidden></p>
+
+        <div class="login-divider">or</div>
+
+        <button class="google-button" id="google-demo-button" type="button">
+          <svg width="32" height="32" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.2l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.5 5.8c4.4-4.1 7.1-10.1 7.1-17.5z"/><path fill="#FBBC05" d="M10.5 28.7A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.7l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.8l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.5-5.8c-2.1 1.4-4.8 2.3-8.4 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg>
+          Sign in with Google
+        </button>
+
+        <p class="signup-prompt">Don't have an account? <a class="signup-link" href="signup.html">Sign Up</a></p>
+      </form>
+    </section>
+  </main>
+  <dialog class="google-demo-dialog" id="google-demo-dialog" aria-labelledby="google-demo-title">
+    <form id="google-demo-form" class="google-demo-form" novalidate>
+      <button class="google-demo-close" type="button" id="google-demo-cancel" aria-label="Close">×</button>
+      <svg class="google-demo-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.2l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.5 5.8c4.4-4.1 7.1-10.1 7.1-17.5z"/><path fill="#FBBC05" d="M10.5 28.7A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.7l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.8l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.5-5.8c-2.1 1.4-4.8 2.3-8.4 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg>
+      <h2 id="google-demo-title">Continue with Google</h2>
+      <p class="google-demo-warning">Demo only: this does not connect to Google or verify the identity you enter. The account will be saved in this browser.</p>
+      <label class="google-demo-field"><span>Name</span><input name="name" type="text" autocomplete="name" maxlength="80" required /></label>
+      <label class="google-demo-field"><span>Email</span><input name="email" type="email" autocomplete="email" maxlength="254" required /></label>
+      <p class="portal-message" id="google-demo-message" role="status" hidden></p>
+      <button class="google-demo-submit" type="submit">Continue (demo)</button>
+      <button class="google-demo-cancel-link" type="button" id="google-demo-cancel-link">Cancel</button>
+    </form>
+  </dialog>
+
+  <script src="validation.js?v=4"></script>
+  <script>
+    const passwordInput = document.getElementById("password");
+    document.getElementById("password-toggle").addEventListener("click", () => {
+      passwordInput.type = passwordInput.type === "password" ? "text" : "password";
+    });
+    initLoginValidation();
+  </script>
+  <script src="auth.js?v=5"></script>
+</body>
+</html>

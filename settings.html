@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Settings | Waste Management Monitoring System</title>
+  <link rel="stylesheet" href="styles.css?v=14" />
+</head>
+<body>
+  <div class="app-shell">
+    <div data-sidebar="settings"></div>
+    <main class="main-content portal-figma-page">
+      <header class="edit-profile-header">
+        <a class="portal-back-link" href="dashboard.html" aria-label="Back to home">←</a>
+        <h1>Settings</h1>
+      </header>
+      <section class="settings-page">
+        <form id="settings-form" class="settings-list">
+          <a class="settings-row" href="notification-settings.html"><span class="settings-row-icon">⚙</span><span class="settings-row-copy"><strong>General Settings</strong></span><span class="settings-chevron">›</span></a>
+          <label class="settings-row"><span class="settings-row-icon">♟</span><span class="settings-row-copy"><strong>Notifications</strong><small>Show report submissions in your notification center</small></span><input type="checkbox" name="reportUpdates" /></label>
+          <label class="settings-row"><span class="settings-row-icon settings-pin-icon">●</span><span class="settings-row-copy"><strong>Location Services</strong><small>Save your preference for future collection reminders</small></span><input type="checkbox" name="collectionReminders" /></label>
+          <label class="settings-row"><span class="settings-row-icon settings-dark-icon">◐</span><span class="settings-row-copy"><strong>Dark Mode</strong><small>Use a darker appearance for this dashboard</small></span><input type="checkbox" name="darkMode" /></label>
+          <div class="settings-row settings-language-row"><span class="settings-row-icon">文</span><span class="settings-row-copy"><strong>Language</strong></span><span class="settings-language-value">English</span><span class="settings-chevron">›</span></div>
+          <div class="settings-actions"><p id="settings-message" class="portal-message" role="status" hidden></p><button class="profile-save-button" type="submit">Save Changes</button></div>
+        </form>
+        <div class="settings-data-section">
+          <p>Preferences are saved in this browser and are not synced to another device.</p>
+          <button class="portal-danger-button" id="clear-local-data" type="button">Clear saved app data</button>
+          <p id="clear-data-message" class="portal-message" role="status" hidden></p>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="sidebar.js?v=3"></script>
+  <script src="portal.js?v=11"></script>
+</body>
+</html>

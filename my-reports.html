@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Reports | Waste Management Monitoring System</title>
+  <link rel="stylesheet" href="styles.css?v=10" />
+</head>
+<body>
+  <div class="app-shell">
+    <div data-sidebar="my-reports" data-expand-report></div>
+    <main class="main-content portal-figma-page">
+      <header class="edit-profile-header my-reports-header">
+        <a class="portal-back-link" href="report.html" aria-label="Back to report page">‹</a>
+        <h1>My Reports</h1>
+        <a class="portal-primary-link my-report-submit" href="report.html">＋ Submit a report</a>
+      </header>
+      <section class="portal-page my-reports-page-content">
+        <div class="portal-card my-reports-card">
+          <div class="my-report-tabs" id="my-report-filter" role="tablist" aria-label="Filter reports">
+            <button class="my-report-tab is-active" type="button" role="tab" aria-selected="true" data-status="all">All <span id="count-all">0</span></button>
+            <button class="my-report-tab" type="button" role="tab" aria-selected="false" data-status="Pending">Pending</button>
+            <button class="my-report-tab" type="button" role="tab" aria-selected="false" data-status="In Progress">In Progress</button>
+            <button class="my-report-tab" type="button" role="tab" aria-selected="false" data-status="Resolved">Resolved</button>
+          </div>
+          <p id="my-report-count" class="my-report-count" aria-live="polite">Loading your reports…</p>
+          <div class="my-report-list" id="my-report-list" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <dialog class="portal-dialog" id="report-detail-dialog">
+    <div class="portal-dialog-content"><button class="portal-dialog-close" id="close-report-detail" type="button" aria-label="Close">×</button><p class="portal-eyebrow">Report details</p><h2 id="report-detail-title"></h2><div id="report-detail-body"></div></div>
+  </dialog>
+  <script src="sidebar.js?v=3"></script>
+  <script src="portal.js?v=7"></script>
+</body>
+</html>

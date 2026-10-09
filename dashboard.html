@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home Dashboard | Waste Management Monitoring System</title>
+  <link rel="stylesheet" href="styles.css?v=10" />
+</head>
+<body>
+  <div class="app-shell">
+    <div data-sidebar="home"></div>
+
+    <main class="main-content">
+      <header class="topbar">
+        <label class="search-bar">
+          <input type="search" placeholder="Search reports, barangay or location" style="display:none" />
+          <span>Search reports, barangay or location</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#49454f"><path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z"/></svg>
+        </label>
+        <div class="topbar-user">
+          <svg width="69" height="59" viewBox="0 0 69 59" fill="#000"><path d="M11.5 46.7084V41.7918H17.25V24.5834C17.25 21.1827 18.4479 18.1713 20.8438 15.549C23.2396 12.8858 26.3542 11.1445 30.1875 10.3251V8.60425C30.1875 7.57994 30.5948 6.71952 31.4094 6.023C32.2719 5.2855 33.3021 4.91675 34.5 4.91675C35.6979 4.91675 36.7042 5.2855 37.5188 6.023C38.3813 6.71952 38.8125 7.57994 38.8125 8.60425V10.3251C42.6458 11.1445 45.7604 12.8858 48.1562 15.549C50.5521 18.1713 51.75 21.1827 51.75 24.5834V41.7918H57.5V46.7084H11.5ZM34.5 54.0834C32.9188 54.0834 31.5531 53.6122 30.4031 52.6699C29.301 51.6865 28.75 50.5188 28.75 49.1668H40.25C40.25 50.5188 39.675 51.6865 38.525 52.6699C37.4229 53.6122 36.0813 54.0834 34.5 54.0834ZM23 41.7918H46V24.5834C46 21.8792 44.874 19.5643 42.6219 17.6386C40.3698 15.7129 37.6625 14.7501 34.5 14.7501C31.3375 14.7501 28.6302 15.7129 26.3781 17.6386C24.126 19.5643 23 21.8792 23 24.5834V41.7918Z"/></svg>
+          <img class="user-avatar" src="https://api.builder.io/api/v1/image/assets/TEMP/49cbfe85ad0f043964d3aac02ee1cf3a1dfbf2ce?width=136" alt="Arishelle Fernandez" />
+          <div>
+            <p class="user-name">Arishelle Fernandez</p>
+            <p class="user-role">Pasigueño</p>
+          </div>
+        </div>
+      </header>
+
+      <section class="welcome-card">
+        <h2 class="welcome-title">Good Morning,Arishelle Fernandez!</h2>
+        <p class="welcome-subtitle">Here’s what’s happening in Pasig today.</p>
+        <div class="stat-grid">
+          <div class="stat-card stat-card-reports">
+            <img class="stat-icon" src="https://api.builder.io/api/v1/image/assets/TEMP/40c6bf67696bdcb3963c03cd5581618591cc5bb9?width=204" alt="" />
+            <div class="stat-body"><p class="stat-value">24</p><p class="stat-label">Total Reports</p></div>
+          </div>
+          <div class="stat-card stat-card-collection">
+            <img class="stat-icon" src="https://api.builder.io/api/v1/image/assets/TEMP/cbde0ba755db5cf7476273b8f01327fd07c31458?width=304" alt="" />
+            <div class="stat-body"><p class="stat-value">18</p><p class="stat-label">collection</p></div>
+          </div>
+          <div class="stat-card stat-card-pending">
+            <img class="stat-icon" src="https://api.builder.io/api/v1/image/assets/TEMP/fc67d4f538084c52b67588bf305fdc0d4668a4d3?width=220" alt="" />
+            <div class="stat-body"><p class="stat-value">4</p><p class="stat-label">Pending</p></div>
+          </div>
+          <div class="stat-card stat-card-urgent">
+            <img class="stat-icon" src="https://api.builder.io/api/v1/image/assets/TEMP/1c7482c588257389a082fcbe5be7747b8c2bbfe3?width=246" alt="" />
+            <div class="stat-body"><p class="stat-value">2</p><p class="stat-label">Urgent</p></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="home-grid">
+        <section class="panel">
+          <div class="panel-header">
+            <h3 class="panel-title">Recent Reports</h3>
+            <a class="view-all-link" href="my-reports.html">View All</a>
+          </div>
+          <div class="report-list" id="home-recent-reports">
+            <article class="report-item">
+              <img class="report-thumb" src="https://api.builder.io/api/v1/image/assets/TEMP/7d9d5a5e058026925c253bc3307a5e373ad810c4?width=264" alt="" />
+              <div class="report-info"><h4 class="report-name">Uncollected Garbage</h4><p class="report-meta">Brgy. San Antonio - 2 hrs ago</p></div>
+              <span class="status-badge status-in-progress">In Progress</span>
+            </article>
+            <article class="report-item">
+              <img class="report-thumb" src="https://api.builder.io/api/v1/image/assets/TEMP/f6e72ba923f58e758d7817c25479cd6efaf567b4?width=264" alt="" />
+              <div class="report-info"><h4 class="report-name">Overflowing Trash Bins</h4><p class="report-meta">Brgy. katipolyo - 4 hrs ago</p></div>
+              <span class="status-badge status-resolved">Resolved</span>
+            </article>
+            <article class="report-item">
+              <img class="report-thumb" src="https://api.builder.io/api/v1/image/assets/TEMP/bd19e4fd1c46c2d32fbcc340129d2fd9725e0651?width=230" alt="" />
+              <div class="report-info"><h4 class="report-name">Illegal Dumping</h4><p class="report-meta">Brgy. Pinagbuhatan - 6 hrs ago</p></div>
+              <span class="status-badge status-pending">Pending</span>
+            </article>
+            <article class="report-item">
+              <img class="report-thumb" src="https://api.builder.io/api/v1/image/assets/TEMP/24acc8f0c6000f15faf79dd7d138a5c68e7c9e68?width=228" alt="" />
+              <div class="report-info"><h4 class="report-name">Blocked Drainage</h4><p class="report-meta">Brgy. San Joaquin - 8 hrs ago</p></div>
+              <span class="status-badge status-resolved">Resolved</span>
+            </article>
+          </div>
+        </section>
+
+        <div class="side-column">
+          <section class="panel">
+            <h3 class="panel-title">Reports by Category</h3>
+            <div class="category-body">
+              <div class="category-donut">
+                <img class="category-donut-image" src="https://api.builder.io/api/v1/image/assets/TEMP/d1c3ca3fcab26cb17ae219208a6162a5255cdc00?width=564" alt="" />
+                <div class="donut-center"><p class="donut-total">128</p><p class="donut-caption">Total Reports</p></div>
+              </div>
+              <ul class="legend-list">
+                <li class="legend-item"><span class="legend-dot dot-garbage"></span>Garbage Collection<span class="legend-percent">35%</span></li>
+                <li class="legend-item"><span class="legend-dot dot-dumping"></span>Ilegal Dumping<span class="legend-percent">22%</span></li>
+                <li class="legend-item"><span class="legend-dot dot-bins"></span>Overflowing Bins<span class="legend-percent">20%</span></li>
+                <li class="legend-item"><span class="legend-dot dot-other"></span>Other<span class="legend-percent">12%</span></li>
+              </ul>
+            </div>
+          </section>
+          <section class="banner-card">
+            <p class="banner-text">Together for a cleaner, safer and greener Pasig!</p>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="sidebar.js?v=3"></script>
+  <script src="portal.js?v=12"></script>
+</body>
+</html>
